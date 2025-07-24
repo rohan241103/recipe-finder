@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container rec-container">
+    <div class="recipe-detail-card">
+      <img id="meal-img" src="..." alt="...">
+      <div class="recipe-detail-info">
+        <h2 id="meal-title">Recipe Name</h2>
+        <p><strong>Category:</strong> <span id="meal-category">...</span></p>
+        <p><strong>Instructions:</strong> <span id="meal-instructions">...</span></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    const meal = JSON.parse(localStorage.getItem('selectedMeal'));
+    if (meal) {
+      document.getElementById('meal-img').src = meal.strMealThumb;
+      document.getElementById('meal-img').alt = meal.strMeal;
+      document.getElementById('meal-title').textContent = meal.strMeal;
+      document.getElementById('meal-category').textContent = meal.strCategory;
+      document.getElementById('meal-instructions').textContent = meal.strInstructions;
+    } else {
+      document.querySelector('.recipe-detail-card').innerHTML = '<p>No recipe data found.</p>';
+    }
+  </script>
+</body>
+</html>

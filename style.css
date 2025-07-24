@@ -1,0 +1,151 @@
+body {
+  text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+h1{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: aliceblue;
+}
+
+.container {
+  border-radius: 8px;
+  flex: 1;
+}
+.rec-container{
+  background: #a8c3d6;
+}
+
+input {
+  padding: 10px;
+  width: 60%;
+  margin-right: 10px;
+  border-radius: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #4681f4;
+  color: #fff;
+}
+
+.recipe {
+  margin-top: 20px;
+  text-align: left;
+  background: #a8c3d6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.recipe:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.recipe img {
+  width: 100%;
+  border-radius: 8px;
+  max-width: 250px;
+  margin-bottom: 12px;
+}
+#results{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+
+.recipe-detail-card {
+  display: flex;
+  flex-direction: row;
+  color: #000;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding-top: 32px;
+  max-width: 100%;
+  width: 100%;
+  gap: 32px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.recipe-detail-card img {
+  width: 60%;
+  max-width: 60%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.recipe-detail-info {
+  flex: 1;
+  text-align: left;
+}
+
+.recipe-detail-info h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.recipe-detail-info h2+p {
+  margin: 12px 0;
+  font-size: 1.5rem;
+}
+.recipe-detail-info p+p {
+  margin: 12px 0;
+  font-size: 1.3rem;
+}
+
+footer p{
+  color: #fff;
+  font-size: larger;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #4681f4;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .body{
+    padding: auto 0;
+    margin: auto 0;
+ }
+  .container{
+    padding: 0;
+  }
+  .recipe-detail-card {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  .recipe-detail-card img {
+    width: 100% ;
+    max-width: 70%;
+    margin-bottom: 16px;
+  }
+  .recipe-detail-info {
+     text-align: center;
+  }
+  .recipe-detail-info h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
